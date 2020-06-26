@@ -1,0 +1,26 @@
+image: python:3.7
+
+before_script:
+  - pip install -r requirements.txt
+
+
+stages:
+  - formatting
+  - pytest
+
+formatting:
+  stage: formatting
+  script:
+  - black --check .
+  tags: 
+  - python
+
+pytest:
+  stage: pytest
+  script:
+    - ./run_tests.sh
+  only:
+  - master
+  - dev
+  tags: 
+  - python

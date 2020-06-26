@@ -1,0 +1,34 @@
+{
+    "python.pythonPath": "/home/sandro/anaconda3/envs/supermariopy/bin/python",
+    "python.testing.pytestArgs": [
+        ".",
+        "--exitfirst",
+        "--verbose",
+        // "--mpl",
+        // "--mpl-baseline-path=baseline",
+        // "--cov=supermariopy", // debugging does not work with coverage report
+        // "--cov-report", // debugging does not work with coverage report
+        // "xml:cov.xml", // debugging does not work with coverage report
+        "-s",
+        // "-m not cuda",
+        "-k test_stickman"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "/home/sandro/anaconda3/envs/supermariopy/bin/black",
+    "[python]": {
+        "editor.formatOnPaste": true
+    },
+    "editor.formatOnSave": true,
+    "autoDocstring.docstringFormat": "numpy",
+    "python.linting.enabled": true,
+    "python.linting.banditEnabled": true,
+    "python.linting.banditPath": "/home/sandro/anaconda3/envs/supermariopy/bin/bandit",
+    "python.dataScience.sendSelectionToInteractiveWindow": true,
+    "python.testing.autoTestDiscoverOnSaveEnabled": true,
+    "coverage-gutters.showLineCoverage": true,
+    "coverage-gutters.showGutterCoverage": false,
+    "editor.fontSize": 11
+}

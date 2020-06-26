@@ -1,0 +1,84 @@
+\documentclass[a4paper,10pt,oneside,twocolumn]{article}
+
+% ******************************************
+% *  Author : ${AUTHOR}   
+% *  Created On : ${DATE}
+% *  File : ${FILE}
+% *******************************************
+
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+
+\usepackage{times}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{super_math}
+
+% Include other packages here, before hyperref.
+\usepackage{siunitx}
+\usepackage{booktabs} % \midrule etc for tables
+\usepackage{placeins} % \FloatBarrier
+\usepackage{xcolor}
+
+\definecolor{todocolor}{rgb}{0,.7,.2} 
+\newcommand{\todo}[1]{\colorbox{todocolor}{(TODO: #1)}}
+
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+
+\usepackage[compact]{titlesec}
+\titlespacing*{\section}{0pt}{1ex}{1ex}
+\titlespacing*{\paragraph}{0pt}{1ex}{1ex}
+\titlespacing*{\subsection}{0pt}{1ex}{0ex}
+\titlespacing*{\subsubsection}{0pt}{0.5ex}{0ex}
+% https://tex.stackexchange.com/questions/101116/how-to-reduce-the-space-before-after-section-and-subsection
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\normalsize\bfseries}
+\titleformat*{\subsubsection}{\large\bfseries}
+\titleformat*{\paragraph}{\normalsize\bfseries} 
+\titleformat*{\subparagraph}{\large\bfseries}
+% https://robjhyndman.com/hyndsight/squeezing-space-with-latex/
+\setlength{\parskip}{0cm}
+\setlength{\parindent}{1em}
+
+\title{
+    \vspace{-2cm}
+}
+
+\author{
+    ${AUTHOR}
+}
+
+\date{
+    ${DATE}
+}
+
+
+%--------------- INSTRUCTIONS
+% add figures as \newcommand in figures.tex, then use the command here
+% add tables as \newcommand in tables.tex, the use command here
+% outsource other commands in commands.tex, if required
+
+
+\begin{document}
+\maketitle
+
+
+% \FloatBarrier
+% {
+%     \small
+%     \bibliography{references}
+%     \bibliographystyle{apalike}
+% }
+
+
+\end{document}

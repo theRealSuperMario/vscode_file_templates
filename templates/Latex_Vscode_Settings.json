@@ -1,0 +1,68 @@
+{
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk 🔃",
+            "tools": [
+                "latexmk461"
+            ]
+        },
+        {
+            "name": "pdflatex ➞ bibtex ➞ pdflatex`×2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+    ],
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk461",
+            "command": "latexmk461",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-synctex=1",
+                "-shell-escape",
+                "-outdir=%OUTDIR%",
+                "-bibtex",
+                "-Werror", // throw error on undefined references https://tex.stackexchange.com/questions/411012/can-i-configure-latexmk-to-fail-on-undefined-references-citations
+                "%DOC%"
+            ],
+            "env": {
+                "TEXMFHOME": "%DIR%/texmf"
+            }
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-shell-escape",
+                "%DOC%",
+            ],
+            "env": {
+                "TEXMFHOME": "%DIR%/texmf"
+            }
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ],
+            "env": {}
+        },
+    ],
+    "latex-workshop.latex.outDir": "./",
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
+    "latex-workshop.latex.autoClean.run": "onFailed",
+}
